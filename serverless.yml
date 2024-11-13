@@ -1,0 +1,12 @@
+service: CognitionCompass
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: eu-west-1
+
+functions:
+  app:
+    handler: index.handler  # This points to index.js where serverless(app) is exported
+    events:
+      - httpApi: "*"

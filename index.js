@@ -24,6 +24,9 @@ connectToDatabase();
 // Middleware
 app.use(express.json());
 
+// Base route
+app.get('/', (req, res) => res.send('Hello from Serverless Express!'))
+
 // Use the user router
 app.use('/', userRouter);
 
